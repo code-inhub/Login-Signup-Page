@@ -13,15 +13,18 @@ mongoose
 
 const LogInSchema = new mongoose.Schema({
   name: {
-    type: String, 
+    type: String,
     required: true,
   },
   password: {
     type: String,
     required: true,
   },
+  is_admin: {
+    type: Number,
+    default: 0,
+  },
 });
-
 
 const collection = new mongoose.model("collection1", LogInSchema);
 
